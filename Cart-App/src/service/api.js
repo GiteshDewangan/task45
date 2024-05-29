@@ -9,7 +9,7 @@ export const Order = async(data)=>{
     try{
         return await axios.post(`${URL}/order`,data, {
     headers: {
-        'content-type': 'text/json'
+        'content-type': 'text/plain
     }});
     }catch(error){
         console.log(error.message);
