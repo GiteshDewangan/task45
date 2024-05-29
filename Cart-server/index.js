@@ -7,7 +7,9 @@ import Connection from './database/db.js';
 const App  = express();
 
 
-App.use(cors());
+App.use(cors({
+  origin : 'https://task45-six.vercel.app'
+}));
 App.use(bodyParser.json({extended : true}));
 App.use(bodyParser.urlencoded({extended : true}));
 App.use('/',router);
