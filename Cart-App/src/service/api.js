@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 
 
 // put you api url
-const URL = 'http://192.168.21.251:8000'; 
+const URL = 'https://task45-ochre.vercel.app/'; 
 
 export const Order = async(data)=>{
     try{
