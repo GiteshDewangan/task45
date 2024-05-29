@@ -7,7 +7,10 @@ const URL = 'https://task45-ochre.vercel.app';
 
 export const Order = async(data)=>{
     try{
-        return await axios.post(`${URL}/order`, data);
+        return await axios.post(`${URL}/order`,{
+    headers: {
+        'Content-Type': 'text/plain'
+    }, data);
     }catch(error){
         console.log(error.message);
         toast.error(error.message);
