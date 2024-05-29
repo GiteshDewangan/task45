@@ -5,6 +5,6 @@ import {DataOrder} from '../controller/Place-order.js'
 
 const router = express.Router();
 
-router.post('/order', DataOrder);
+router.post('/orderr', DataOrder);
 
 export default router;
