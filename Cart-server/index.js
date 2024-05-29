@@ -8,7 +8,7 @@ const App  = express();
 
 
 App.use(cors({
-  origin: '*'
+  origin:true
 }));
 App.use(bodyParser.json({extended : true}));
 App.use(bodyParser.urlencoded({extended : true}));
