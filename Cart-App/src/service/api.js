@@ -9,7 +9,8 @@ export const Order = async(data)=>{
     try{
         return await axios.post(`${URL}/ok`,data,{
             headers : {
-                'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*',
+                'Accept' :'text/plain'
             }
         });
     }catch(error){
