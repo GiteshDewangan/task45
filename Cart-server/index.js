@@ -7,8 +7,7 @@ import Connection from './database/db.js';
 const App  = express();
 const corsOptions = {
   origin: '*',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST']
 };
 
 App.options('*', cors(corsOptions));;
