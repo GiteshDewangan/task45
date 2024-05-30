@@ -5,15 +5,10 @@ import bodyParser from 'body-parser';
 import Connection from './database/db.js';
 
 const App  = express();
-const corsOptions = {
-  origin: '*',
-  methods: ['GET', 'POST']
-};
-
-App.options('*', cors(corsOptions));;
 
 App.use(bodyParser.json({extended : true}));
 App.use(bodyParser.urlencoded({extended : true}));
+App.use(cors());
 App.use('/',router);
 
 const port = 8000;
