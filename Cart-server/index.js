@@ -5,8 +5,14 @@ import bodyParser from 'body-parser';
 import Connection from './database/db.js';
 
 const App  = express();
+const corsOptions = {
+  origin: 'https://example.com',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
 
-App.use(cors());
+App.options('*', cors(corsOptions));;
+
 App.use(bodyParser.json({extended : true}));
 App.use(bodyParser.urlencoded({extended : true}));
 App.use('/',router);
